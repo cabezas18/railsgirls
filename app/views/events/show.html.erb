@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @event.city %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= image_tag(@event.photo_url, :width => 600) if @event.photo.present? %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @event.hour %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @event.link %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @event.category %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
